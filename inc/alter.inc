@@ -71,21 +71,21 @@ function materialize_date_select_process_alter(&$element, $form_state, $context)
  */
 function materialize_css_alter(&$css) {
   $exclude = array(
-    'sites/all/modules/contrib/date/date_popup/themes/datepicker.1.7.css' => FALSE,
-    'sites/all/modules/contrib/date/date_api/date.css' => FALSE,
-    'sites/all/modules/contrib/picture/picture_wysiwyg.css' => FALSE,
-    'modules/user/user.css' => FALSE,
-    'modules/node/node.css' => FALSE,
-    'sites/all/modules/contrib/logintoboggan/logintoboggan.css' => FALSE,
-    'sites/all/modules/contrib/ckeditor/ckeditor.css' => FALSE,
-    // Fivestar requests a bunch of images we do not need.
-    'sites/all/modules/contrib/fivestar/css/fivestar.css' => FALSE,
-    'sites/all/modules/contrib/viewfield/viewfield.css' => FALSE, // request fails, file does not exist.
-    'modules/system/system.messages.css' => FALSE, // We use foundation
-    'modules/system/system.base.css' => FALSE, // Dont load all those images
-    'modules/system/system.theme.css' => FALSE, // Dont load all those images
-    // Zurb removes system.menus.css
-    'modules/filter/filter.css' => FALSE, // Dont load all those images
+    // 'sites/all/modules/contrib/date/date_popup/themes/datepicker.1.7.css' => FALSE,
+    // 'sites/all/modules/contrib/date/date_api/date.css' => FALSE,
+    // 'sites/all/modules/contrib/picture/picture_wysiwyg.css' => FALSE,
+    // 'modules/user/user.css' => FALSE,
+    // 'modules/node/node.css' => FALSE,
+    // 'sites/all/modules/contrib/logintoboggan/logintoboggan.css' => FALSE,
+    // 'sites/all/modules/contrib/ckeditor/ckeditor.css' => FALSE,
+    // // Fivestar requests a bunch of images we do not need.
+    // 'sites/all/modules/contrib/fivestar/css/fivestar.css' => FALSE,
+    // 'sites/all/modules/contrib/viewfield/viewfield.css' => FALSE, // request fails, file does not exist.
+    'modules/system/system.messages.css' => FALSE,
+    // 'modules/system/system.base.css' => FALSE, // Dont load all those images
+    // 'modules/system/system.theme.css' => FALSE, // Dont load all those images
+    // // Zurb removes system.menus.css
+    // 'modules/filter/filter.css' => FALSE, // Dont load all those images
   );
   $css = array_diff_key($css, $exclude);
 }
@@ -98,7 +98,7 @@ function materialize_js_alter(&$javascript) {
     'misc/textarea.js' => FALSE,
     'misc/tableheader.js' => FALSE,
     'misc/tabledrag.js' => FALSE,
-    'sites/all/modules/contrib/admin_menu/admin_devel/admin_devel.js' => FALSE,
+    // 'sites/all/modules/contrib/admin_menu/admin_devel/admin_devel.js' => FALSE,
   );
   $javascript = array_diff_key($javascript, $exclude);
 }

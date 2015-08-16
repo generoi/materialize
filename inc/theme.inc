@@ -11,30 +11,6 @@ function materialize_links__locale_block($variables) {
 }
 
 /**
- * Overides theme_status_messages().
- *
- * Use foundation classes for status message.
- */
-function materialize_status_messages($vars) {
-  $display = $vars['display'];
-  $output = '';
-  $content = '';
-  foreach (drupal_get_messages($display) as $type => $messages) {
-    foreach ($messages as $message) {
-      $content .= '<div data-alert class="alert-box ' . $type . '">';
-      $content .= $message;
-      $content .= '<a href="#" class="close">&times;</a>';
-      $content .= '</div>';
-    }
-  }
-  if ($content) {
-    $output = '<div id="messages">' . $content . '</div>';
-  }
-
-  return $output;
-}
-
-/**
  * Implements theme_context_bean_child().
  *
  * Dont render the title for the child beans, leave it up that bean instead.

@@ -41,6 +41,36 @@ function materialize_preprocess_page(&$variables) {
   if (isset($variables['tabs'])) {
     unset($variables['tabs']);
   }
+  $variables['printed_main_menu'] = '';
+  $variables['printed_secondary_menu'] = '';
+  if (!empty($variables['main_menu'])) {
+    $variables['printed_main_menu'] = theme('links__system_main_menu', array(
+      'links' => $variables['main_menu'],
+      'attributes' => array(
+        'id' => 'main-menu-links',
+        'class' => array('left'),
+      ),
+      'heading' => array(
+        'text' => t('Main menu'),
+        'level' => 'h4',
+        'class' => array('element-invisible'),
+      ),
+    ));
+  }
+  if (!empty($variables['secondary_menu'])) {
+    $variables['printed_secondary_menu'] = theme('links__system_secondary_menu', array(
+      'links' => $variables['secondary_menu'],
+      'attributes' => array(
+        'id' => 'main-menu-links',
+        'class' => array('right'),
+      ),
+      'heading' => array(
+        'text' => t('Secondary menu'),
+        'level' => 'h4',
+        'class' => array('element-invisible'),
+      ),
+    ));
+  }
 }
 
 /**

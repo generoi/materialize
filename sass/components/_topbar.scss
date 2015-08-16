@@ -1,8 +1,0 @@
-.top-bar {
-  // Remove views padding
-  .views-exposed-form .views-exposed-widget { padding: 0; }
-  // Dont float autocomplete results
-  #autocomplete li { float: none; }
-  // Delegate the active color
-  a.active { color: $topbar-link-color-active; }
-}
