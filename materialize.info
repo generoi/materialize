@@ -1,0 +1,19 @@
+name = Materialize
+description = Materialize base theme for Drupal
+
+core = 7.x
+engine = phptemplate
+
+breakpoints[small] = (max-width: 600px)
+breakpoints[medium] = (max-width: 992px)
+breakpoints[large] = (min-width: 993px)
+
+regions[header]              = Header
+regions[help]                = Help
+regions[highlighted]         = Highlighted
+regions[featured]            = Featured
+regions[content_above]       = Above content
+regions[content]             = Content
+regions[content_field]       = Content field
+regions[content_below]       = Below content
+regions[footer]              = Footer
